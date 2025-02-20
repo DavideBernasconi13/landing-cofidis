@@ -291,34 +291,29 @@ ol {
 .hero__info {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    height: 100%;
+    border: 1px solid green;
 }
 
-.cover--image {
-    min-height: 600px;
-    color: #fff;
-    justify-content: flex-end;
-    text-align: left;
+/* Biography */
+#biography {
+    background: #010d10;
+    color: var(--white-color);
 }
 
-.cover--image h1,
-.cover--image h2 {
-    font-size: 2.4rem;
-}
-
-.cover--image h3 {
-    font-size: 1.2rem;
+#biography h2 {
     text-transform: uppercase;
-    font-weight: normal;
 }
 
-.cover--image .cover__content {
-    max-width: 1250px;
-    width: 100%;
-}
+@media (max-width: 768px) {
+    #biography {
+        padding: 20vh 15px;
+    }
 
-.cover__content {
-    max-width: 600px;
-    margin: 0 auto;
+    #biography h2 {
+        text-align: left;
+    }
 }
 
 /* ! Expertise square */
@@ -328,29 +323,6 @@ ol {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-/* ! Card */
-.card {
-    background: #eee;
-    padding: 30px;
-    border-radius: 15px;
-    text-align: center;
-}
-
-/* ! Titles */
-.tiles {
-    min-height: 500px;
-    overflow: hidden;
-    border-radius: 50px;
-    color: #fff;
-    position: relative;
-}
-
-.tiles__content {
-    padding: 30px;
-    background: rgb(255, 255, 255);
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
 .tiles__label {
