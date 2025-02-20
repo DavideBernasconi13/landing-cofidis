@@ -126,10 +126,6 @@ ol {
     background: #000;
 }
 
-.button--red {
-    background: red;
-}
-
 .button--small {
     padding: 10px 20px;
     font-size: 1rem;
@@ -151,15 +147,17 @@ ol {
 .button--round-outline {
     background: transparent;
     color: #fff;
-    padding: 15px 30px;
-    border-radius: 100px;
+    padding: 3px 7px;
+    border-radius: 6px;
     font-weight: bold;
-    border: 1px solid #ffff;
+    border: 2px solid var(--white-color);
 }
 
 .button--round-outline:hover {
-    background: #fff;
-    color: #000;
+    transform: scale(1.04); 
+    background: transparent;
+    border: 2px solid var(--highlight-color); 
+    transition: all 0.2s ease; 
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -291,7 +289,6 @@ ol {
 .hero__info{
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .cover--image {
@@ -454,6 +451,9 @@ ol {
     color: var(--highlight-color);
 }
 
+.hide {
+    display: none;
+}
 .img-res {
     width: 100%;
 }
