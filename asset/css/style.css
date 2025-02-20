@@ -6,6 +6,7 @@ html {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    background: var(--dark-color);
 }
 
 *,
@@ -56,6 +57,7 @@ hr {
     --testi-color: #FBF4E6;
     --cool_grey-color: #46687B;
     --sfondo-color: #052130;
+    --dark-color: #010d10;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -77,12 +79,15 @@ h1,
 
 h2,
 .text-2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: -1.7%;
+    text-transform: uppercase;
 }
 
 h3,
 .text-3 {
-    font-size: 1.5rem;
+    font-size: 2.25rem;
 }
 
 h4,
@@ -296,14 +301,16 @@ ol {
     border: 1px solid green;
 }
 
-/* Biography */
+/* ! Biography */
 #biography {
     background: #010d10;
     color: var(--white-color);
 }
 
-#biography h2 {
-    text-transform: uppercase;
+a #content-secondary-button {
+    display: inline;
+    margin-top: 1rem;
+    text-align: left;
 }
 
 @media (max-width: 768px) {
@@ -324,11 +331,15 @@ ol {
     align-items: center;
     justify-content: center;
 }
+.square:nth-child(:first-child):hover{
+    border: 20px solid green;
+}
 
-.tiles__label {
-    position: absolute;
-    bottom: 30px;
-    left: 30px;
+.square h3 {
+    font-family: 'Roboto slab', serif;
+    background: var(--black-color);
+    color: var(--white-color);
+    line-height: 120%;
 }
 
 /* ! Footer */
@@ -441,6 +452,7 @@ ol {
 
 .hide {
     display: none;
+    transition: all 0.4s ease;
 }
 
 .img-res {
