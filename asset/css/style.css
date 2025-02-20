@@ -68,7 +68,11 @@ hr {
 
 h1,
 .text-1 {
-    font-size: 3.4rem;
+    font-size: 3rem;
+    font-family: 'Roboto slab', serif;
+    font-weight: 400;
+    letter-spacing: 2%;
+    line-height: 110%;
 }
 
 h2,
@@ -82,10 +86,11 @@ h3,
 }
 
 h4,
-p,
 .text-4 {
-    font-size: 0.9rem;
+    font-size: 0.9375rem;
 }
+
+p{font-size: 1rem;}
 
 h1,
 h2,
@@ -168,13 +173,14 @@ ol {
     left: 0;
     width: 100%;
     z-index: 999;
+    font-size: 0.875rem;
 }
 
 .header__content {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    max-width: 1500px;
+    max-width: 1535px;
     padding-top: 150px;
     margin: 0 auto;
 }
@@ -187,6 +193,7 @@ ol {
 
 .header__logo {
     font-weight: bold;
+    font-size: 1rem;
 }
 
 .header__menu {
@@ -202,6 +209,14 @@ ol {
 .header__quickMenu li {
     display: inline-flex;
     align-items: center;
+}
+
+.header__quickMenu li {
+    padding: 0 8px;
+}
+
+.header__quickMenu li a i {
+    font-size: 0.9375rem;
 }
 
 .header__quickMenu li .show-mobile {
@@ -239,7 +254,7 @@ ol {
     }
 }
 
-/* ! Cover */
+/* ! Hero */
 .hero {
     color: var(--testi-color);
     padding: 20px;
@@ -265,6 +280,18 @@ ol {
     background-color: var(--sfondo-color);
     opacity: 0.8;
     z-index: -1;
+}
+
+.hero__title,
+.hero__info {
+    border: 1px solid red;
+    padding: 15% 9% 0 9%!important;
+}
+
+.hero__info{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .cover--image {
@@ -422,6 +449,9 @@ ol {
 
 .active {
     font-weight: bold;
+}
+.evi{
+    color: var(--highlight-color);
 }
 
 .img-res {
