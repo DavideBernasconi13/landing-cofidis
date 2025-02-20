@@ -90,7 +90,9 @@ h4,
     font-size: 0.9375rem;
 }
 
-p{font-size: 1rem;}
+p {
+    font-size: 1rem;
+}
 
 h1,
 h2,
@@ -154,10 +156,10 @@ ol {
 }
 
 .button--round-outline:hover {
-    transform: scale(1.04); 
+    transform: scale(1.04);
     background: transparent;
-    border: 2px solid var(--highlight-color); 
-    transition: all 0.2s ease; 
+    border: 2px solid var(--highlight-color);
+    transition: all 0.2s ease;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -283,10 +285,10 @@ ol {
 .hero__title,
 .hero__info {
     border: 1px solid red;
-    padding: 15% 9% 0 9%!important;
+    padding: 15% 9% 0 9% !important;
 }
 
-.hero__info{
+.hero__info {
     display: flex;
     flex-direction: column;
 }
@@ -317,6 +319,15 @@ ol {
 .cover__content {
     max-width: 600px;
     margin: 0 auto;
+}
+
+/* ! Expertise square */
+.square {
+    aspect-ratio: 1 / 1;
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* ! Card */
@@ -363,6 +374,10 @@ ol {
     flex-wrap: wrap;
     max-width: 1250px;
     margin: 0 auto;
+}
+
+.grid--large {
+    max-width: 100%;
 }
 
 .grid--small {
@@ -447,13 +462,15 @@ ol {
 .active {
     font-weight: bold;
 }
-.evi{
+
+.evi {
     color: var(--highlight-color);
 }
 
 .hide {
     display: none;
 }
+
 .img-res {
     width: 100%;
 }
