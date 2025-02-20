@@ -46,6 +46,19 @@ hr {
 }
 
 /* -------------------------------------------------------------------------------- */
+/* ! Custom properties */
+/* -------------------------------------------------------------------------------- */
+:root {
+    --big_areas-color: #51686F;
+    --black-color: #000;
+    --white-color: #fff;
+    --highlight-color: #FCBF49;
+    --testi-color: #FBF4E6;
+    --cool_grey-color: #46687B;
+    --sfondo-color: #052130;
+}
+
+/* -------------------------------------------------------------------------------- */
 /* ! Tytle System */
 /* -------------------------------------------------------------------------------- */
 .text-0 {
@@ -71,7 +84,7 @@ h3,
 h4,
 p,
 .text-4 {
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 
 h1,
@@ -149,14 +162,26 @@ ol {
 /* -------------------------------------------------------------------------------- */
 /* ! Header */
 .header {
-    background: #333;
+    color: var(--white-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+}
+
+.header__content {
     display: flex;
     justify-content: space-between;
+    align-items: flex-end;
+    max-width: 1500px;
+    padding-top: 150px;
+    margin: 0 auto;
 }
 
 .header a {
-    color: #fff;
-    display: block;
+    color: var(--white-color);
+    display: inline-block;
     padding: 15px;
 }
 
@@ -168,20 +193,78 @@ ol {
     margin-bottom: 0;
 }
 
-.header__menu li {
-    display: inline-block;
+.header ul {
+    margin-bottom: 0;
+    display: flex;
+}
+
+.header__menu li,
+.header__quickMenu li {
+    display: inline-flex;
+    align-items: center;
+}
+
+.header__quickMenu li .show-mobile {
+    display: none;
+}
+
+.header__menu li a {
+    padding: 15px 0;
+}
+
+.header__menu li:not(:last-child):after {
+    content: '/';
+    margin: 0 3px 0 3px;
+}
+
+@media (max-width: 768px) {
+    .header__content {
+        padding: 50px 20px;
+        position: absolute;
+        width: 100%;
+    }
+
+    a.header__logo {
+        padding: 15px 0;
+    }
+
+    .header__quickMenu {
+        position: absolute;
+        bottom: -80vh;
+        left: 0;
+    }
+
+    .header__quickMenu li .show-mobile {
+        display: block;
+    }
 }
 
 /* ! Cover */
-.cover {
-    background: #eee;
+.hero {
+    color: var(--testi-color);
     padding: 20px;
-    min-height: 100vh;
+    height: 110vh;
+    width: 100%;
     display: flex;
     flex-flow: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--sfondo-color);
+    opacity: 0.8;
+    z-index: -1;
 }
 
 .cover--image {
@@ -333,8 +416,12 @@ ol {
 /* -------------------------------------------------------------------------------- */
 /* ! Helpers */
 /* -------------------------------------------------------------------------------- */
-.cbd {
+.debug {
     border: 1px solid red;
+}
+
+.active {
+    font-weight: bold;
 }
 
 .img-res {

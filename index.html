@@ -4,22 +4,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Landingpage cofidis</title>
+    <link rel="stylesheet" href="asset/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
     <!-- Header -->
-    <div class="header">
-        <a href="#" class="header__logo"> LOGO </a>
-        <ul class="header__menu">
-            <li><a href="#">Link 1</a></li>
-            <li><a href="#">Link 2</a></li>
-            <li><a href="#">Link 3</a></li>
-            <li><a href="#">Link 4</a></li>
-        </ul>
-    </div>
+    <header class="header debug">
+        <div class="header__content debug">
+            <a href="#" class="header__logo debug"> loremipsum.it </a>
+            <ul class="header__menu debug">
+                <li><a href="#" class="active">IT</a></li>
+                <li><a href="#">EN</a></li>
+            </ul>
+            <ul class="header__quickMenu debug">
+                <li><a href="#" class="show-mobile"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" style=" background: url(asset/img/hero.png) no-repeat center center; background-size: cover">
+        <div class="grid grid--small ">
+            <div class="col-50 hero__title">
+                <h1>Plans are nothing, planning is everything</h1>
+            </div>
+            <div class="col-50 hero__info">
+                <h2 class="text-4">Maria Rossi</h2>
+                <p>Strategic consultant con un focus specifico rivolto a Corporate innovation, Business growth e
+                    Marketing.</p>
+            </div>
+        </div>
+    </section>
 
     <!-- Cover -->
     <div class="cover">
