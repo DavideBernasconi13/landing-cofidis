@@ -28,8 +28,8 @@ Marquee animation
 --------------------------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
 
-    const duration = 10000; // durata dell'animazione in ms
-    const pauseTime = 2000; // tempo di pausa in ms
+    const duration = 20000; // durata dell'animazione in ms
+    const pauseTime = 300; // tempo di pausa in ms
     const directionAnimation = 'left';  // direzione dello scorrimento: left or right  
 
     const marquee = document.querySelector('.marquee');
@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let options = {
         duration: duration,
-        iterations: 2, // una sola iterazione per volta
+        iterations: 1, // una sola iterazione per volta
         easing: "linear"
     };
 
