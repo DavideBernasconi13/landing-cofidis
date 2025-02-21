@@ -347,10 +347,8 @@ a #content-secondary-button {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-}
-
-.square:nth-child(:first-child):hover {
-    border: 20px solid green;
+    position: relative;
+    overflow: hidden;
 }
 
 h3.expertise__title {
@@ -380,6 +378,43 @@ h3.expertise__title {
     h3.expertise__title {
         font-size: 2rem;
     }
+}
+
+/* Square content:hover show */
+.square__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--big_areas-color);
+    color: var(--testi-color);
+    padding: 80px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s ease;
+    transform: translateX(100%);
+}
+
+.square:hover .square__content{
+    transform: translateX(0);
+}
+.square:hover h3.expertise__title{
+    transform: scale(1.2);
+    transition: all 0.3s;
+}
+
+.square__content__title {
+    font-size: 0.9375rem;
+    font-weight: 300;
+}
+
+.square__content__description {
+    padding-top: 25px;
+    font-weight: 500;
+    font-size: 1.25rem;
+    line-height: 1.2;
 }
 
 /* ! Footer */
