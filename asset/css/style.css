@@ -224,10 +224,6 @@ ol {
     font-size: 0.9375rem;
 }
 
-.header__quickMenu li .show-mobile {
-    display: none;
-}
-
 .header__menu li a {
     padding: 15px 0;
 }
@@ -253,10 +249,6 @@ ol {
         bottom: -88vh;
         left: 0;
         padding: 0 9%;
-    }
-
-    .header__quickMenu li .show-mobile {
-        display: block;
     }
 }
 
@@ -315,6 +307,10 @@ ol {
     color: var(--white-color);
 }
 
+#biography p{
+    font-size: 0.9375rem;
+}
+
 a #content-secondary-button {
     display: inline;
     margin-top: 1rem;
@@ -363,6 +359,11 @@ a #content-secondary-button {
     color: var(--testi-color);
 }
 
+.footer__logo {
+    letter-spacing: 3%;
+    font-size: 0.9375rem;
+}
+
 .footer__social {
     display: flex;
     justify-content: center;
@@ -377,8 +378,33 @@ a #content-secondary-button {
 @media (max-width: 768px) {
     .footer__logo {
         text-align: center;
-        border: 1px solid red;
         display: block;
+        padding-bottom: 5px;
+        border-bottom: 1px solid var(--testi-color);
+    }
+
+    .footer__info {
+        padding-top: 15px !important;
+    }
+
+    .footer__email_label {
+        visibility: hidden;
+        position: relative;
+    }
+
+    .footer__email_label:after {
+        content: 'Mail: ';
+        visibility: visible;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+
+    .footer__social.show-mobile {
+        gap: 30px;
+        text-align: center;
+        padding: 50px 0;
+        margin: 0;
     }
 }
 
@@ -487,6 +513,23 @@ a #content-secondary-button {
 .hide {
     display: none;
     transition: all 0.4s ease;
+}
+
+/* ! To show/hide link social */
+.show-mobile {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .show-mobile {
+        display: flex;
+    }
+
+    .hidden-mobile {
+        display: none;
+        position: absolute;
+        height: 0px;
+    }
 }
 
 .font-bold {
