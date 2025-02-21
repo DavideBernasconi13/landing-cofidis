@@ -1,26 +1,38 @@
+/*-------------------------------------------
+Animation text primary / secondary 
+--------------------------------------------*/
+const contentWrapper = document.querySelector('.content-wrapper');
 const contentPrimary = document.getElementById("content-primary");
 const contentPrimaryButton = document.getElementById("content-primary-button");
 const contentSecondary = document.getElementById("content-secondary");
 const contentSecondaryButton = document.getElementById("content-secondary-button");
 
-
-console.log(contentPrimaryButton);
-
 function showHideText() {
-
     contentPrimaryButton.addEventListener("click", (e) => {
         e.preventDefault();
-        contentPrimary.classList.toggle('hide');
-        contentSecondary.classList.toggle('hide');
-    })
+        toggleContent(contentPrimary, contentSecondary);
+    });
 
     contentSecondaryButton.addEventListener("click", (e) => {
         e.preventDefault();
-        contentPrimary.classList.toggle('hide');
-        contentSecondary.classList.toggle('hide');
-    })
+        toggleContent(contentSecondary, contentPrimary);
+    });
 }
-showHideText(); 
+
+function toggleContent(hideElement, showElement) {
+    contentWrapper.style.height = hideElement.offsetHeight + "px"; // Mantiene l'altezza attuale
+    contentWrapper.style.opacity = "0"; // Fade out
+
+    setTimeout(() => {
+        hideElement.classList.add("hide");
+        showElement.classList.remove("hide");
+        
+        contentWrapper.style.height = showElement.offsetHeight + "px"; // Anima la nuova altezza
+        contentWrapper.style.opacity = "1"; // Fade in
+    }, 500);
+}
+
+showHideText();
 
 
 /*-------------------------------------------
