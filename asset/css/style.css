@@ -165,9 +165,9 @@ ol {
     background: transparent;
     border: 2px solid var(--highlight-color);
     transition: all 0.2s ease;
-} 
+}
 
-.button__arrow{
+.button__arrow {
     font-size: 1.3rem;
     font-weight: 800;
 }
@@ -253,7 +253,7 @@ ol {
         position: absolute;
         bottom: -88vh;
         left: 0;
-        padding: 0 9%;
+        padding: 0 20px;
     }
 }
 
@@ -304,6 +304,11 @@ ol {
     .hero__info__button {
         margin-top: 0;
     }
+
+    .hero__title,
+    .hero__info {
+        padding: 0 !important;
+    }
 }
 
 /* ! Biography */
@@ -330,19 +335,16 @@ a #content-secondary-button {
 
 @media (max-width: 768px) {
     #biography {
-        padding: 20vh 15px;
-    }
-
-    #biography h2 {
-        text-align: left;
+        padding-left: 20px;
+        padding-right: 20px;
     }
 }
 
 /* ! Expertise square */
 .square {
     aspect-ratio: 1 / 1;
-    border: 1px solid red;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
 }
@@ -351,11 +353,33 @@ a #content-secondary-button {
     border: 20px solid green;
 }
 
-.square h3 {
-    font-family: 'Roboto slab', serif;
+h3.expertise__title {
+    font-family: 'Roboto slab', serif !important;
+    font-size: 2.25rem;
+    line-height: 1.6;
+    display: inline-block;
+    text-align: center;
+}
+
+.square span {
     background: var(--black-color);
     color: var(--white-color);
-    line-height: 120%;
+    text-align: center;
+    display: inline;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+}
+
+.expertise__title_bg {
+    display: inline;
+    background: var(--black-color);
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    h3.expertise__title {
+        font-size: 2rem;
+    }
 }
 
 /* ! Footer */
@@ -387,6 +411,10 @@ a #content-secondary-button {
 }
 
 @media (max-width: 768px) {
+    footer {
+        padding: 0 15px;
+    }
+
     .footer__logo {
         text-align: center;
         display: block;
@@ -544,6 +572,24 @@ a #content-secondary-button {
         display: none;
         position: absolute;
         height: 0px;
+    }
+}
+
+/* ! title section */
+.title-section {
+    color: var(--white-color);
+}
+
+@media (max-width: 768px) {
+    .title-section {
+        text-align-last: left;
+    }
+}
+
+/* ! padding section mobile */
+@media (max-width: 768px) {
+    .title-section {
+        padding: 50px 20px;
     }
 }
 
