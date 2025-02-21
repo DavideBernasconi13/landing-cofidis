@@ -165,6 +165,11 @@ ol {
     background: transparent;
     border: 2px solid var(--highlight-color);
     transition: all 0.2s ease;
+} 
+
+.button__arrow{
+    font-size: 1.3rem;
+    font-weight: 800;
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -307,14 +312,20 @@ ol {
     color: var(--white-color);
 }
 
-#biography p{
+#biography p {
     font-size: 0.9375rem;
+    font-weight: 400;
 }
 
 a #content-secondary-button {
     display: inline;
     margin-top: 1rem;
     text-align: left;
+}
+
+/* to display button at right */
+.m-auto {
+    margin-left: auto;
 }
 
 @media (max-width: 768px) {
@@ -455,6 +466,10 @@ a #content-secondary-button {
 
 .col-40 {
     width: 40%;
+}
+
+.col-45 {
+    width: 45%;
 }
 
 .col-50 {
