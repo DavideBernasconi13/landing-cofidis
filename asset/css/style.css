@@ -239,7 +239,7 @@ ol {
 
 @media (max-width: 768px) {
     .header__content {
-        padding: 50px 20px;
+        padding: 30px 20px;
         position: absolute;
         width: 100%;
     }
@@ -250,8 +250,9 @@ ol {
 
     .header__quickMenu {
         position: absolute;
-        bottom: -80vh;
+        bottom: -88vh;
         left: 0;
+        padding: 0 9%;
     }
 
     .header__quickMenu li .show-mobile {
@@ -289,16 +290,23 @@ ol {
 
 .hero__title,
 .hero__info {
-    border: 1px solid red;
     padding: 15% 9% 0 9% !important;
 }
 
 .hero__info {
     display: flex;
     flex-direction: column;
-    align-items: flex-end;
     height: 100%;
-    border: 1px solid green;
+}
+
+.hero__info__button {
+    margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+    .hero__info__button {
+        margin-top: 0;
+    }
 }
 
 /* ! Biography */
@@ -331,7 +339,8 @@ a #content-secondary-button {
     align-items: center;
     justify-content: center;
 }
-.square:nth-child(:first-child):hover{
+
+.square:nth-child(:first-child):hover {
     border: 20px solid green;
 }
 
@@ -344,8 +353,33 @@ a #content-secondary-button {
 
 /* ! Footer */
 .footer {
-    background: #eee;
+    background: linear-gradient(#052130, #000);
     padding-top: 30px;
+    color: var(--testi-color);
+    font-size: 0.8125rem;
+}
+
+.footer a {
+    color: var(--testi-color);
+}
+
+.footer__social {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+}
+
+.footer__credits {
+    font-size: 0.75rem;
+    opacity: 0.27;
+}
+
+@media (max-width: 768px) {
+    .footer__logo {
+        text-align: center;
+        border: 1px solid red;
+        display: block;
+    }
 }
 
 /* -------------------------------------------------------------------------------- */
@@ -453,6 +487,10 @@ a #content-secondary-button {
 .hide {
     display: none;
     transition: all 0.4s ease;
+}
+
+.font-bold {
+    font-weight: bold;
 }
 
 .img-res {
