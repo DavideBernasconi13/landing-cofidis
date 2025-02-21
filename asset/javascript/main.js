@@ -28,7 +28,7 @@ Marquee animation
 --------------------------------------------*/
 document.addEventListener('DOMContentLoaded', function () {
 
-    const duration = 12000; // durata dell'animazione in ms
+    const duration = 10000; // durata dell'animazione in ms
     const pauseTime = 2000; // tempo di pausa in ms
     const directionAnimation = 'left';  // direzione dello scorrimento: left or right  
 
