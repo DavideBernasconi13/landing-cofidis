@@ -397,10 +397,11 @@ h3.expertise__title {
     transform: translateX(100%);
 }
 
-.square:hover .square__content{
+.square:hover .square__content {
     transform: translateX(0);
 }
-.square:hover h3.expertise__title{
+
+.square:hover h3.expertise__title {
     transform: scale(1.2);
     transition: all 0.3s;
 }
@@ -415,6 +416,29 @@ h3.expertise__title {
     font-weight: 500;
     font-size: 1.25rem;
     line-height: 1.2;
+}
+
+/* ! Clients e collaborations section */
+.marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    border-top: 1px solid var(--highlight-color);
+    border-bottom: 1px solid var(--highlight-color);
+    background-color: var(--black-color);
+}
+
+.marquee span {
+    display: inline-block;
+    white-space: nowrap;
+    font-size: 1.5rem;
+    color: var(--highlight-color);
+    font-family: 'Roboto slab', serif;
+    font-weight: 400;
+    will-change: transform;
+    align-self: center;
+    text-transform: uppercase;
 }
 
 /* ! Footer */
@@ -590,7 +614,7 @@ h3.expertise__title {
 
 .hide {
     display: none;
-    transition: all 0.4s ease;
+    transition: all 30s ease;
 }
 
 /* ! To show/hide link social */
